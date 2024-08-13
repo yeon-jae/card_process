@@ -1,5 +1,5 @@
 # card_process
-카드 발급 신청 프로세스 익히기 
+💳카드 발급 신청 프로세스 익히기 <br/>
 node modules 사용 대신 berry사용  <br/>
 yarn set version berry<br/>
 
