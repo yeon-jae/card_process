@@ -1,12 +1,14 @@
 module.exports = {
   extends: [
     'eslint:recommended',
-    'plugin:react/recommended',
+    'react-app',
+    'react-app/jest',
+    'plugin:prettier/recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
   ],
-  plugins: ['react', '@typescript-eslint', 'import'],
+  plugins: ['prettier', 'react', '@typescript-eslint', 'import'],
   rules: {
     'prettier/prettier': 'error',
     'react/react-in-jsx-scope': 'off',
@@ -15,5 +17,11 @@ module.exports = {
     react: {
       version: 'detect',
     },
+    'import/resolver': {
+      typescript: {
+        // TypeScript 경로 설정이 포함된 파일을 참조합니다.
+        project: './tsconfig.paths.json',
+      },
+    },
   },
-}
+};
