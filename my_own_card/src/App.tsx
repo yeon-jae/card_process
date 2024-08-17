@@ -2,6 +2,7 @@ import './App.css'
 // import Text from './components/shared/Text'
 import Text from "@shared/Text"
 import Button from './components/shared/Button'
+import Input from './components/shared/Input'
 
 function App() {
   return (
@@ -21,6 +22,13 @@ function App() {
       <Button color='error' weak={true}>클릭해주세요</Button>
       <Button full={true}>클릭해주세요</Button>
       <Button full={true} disabled={true}> 클릭해주세요</Button>
+
+      <div style={{ height: 10, width: '100%', background: '#efefef' }}/>
+      <Input placeholder='로그인'/>
+      <Input/>
+
+
+
 
 
     </div>
