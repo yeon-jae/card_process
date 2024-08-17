@@ -1,21 +1,22 @@
 import styled from "@emotion/styled";
 import { colors } from "@/styles/colorPalette";
-const Input= styled.input`
-    padding:0 16px;
-    font-size:15px;
-    height:48px;
-    font-weight:500;
-    border:1px solid ${colors.grey};
-    width:100px;
-    box-sizing: border-box;
+const Input = styled.input`
+  padding: 16px;
+  font-size: 15px;
+  height: 48px;
+  font-weight: 500;
+  border: 1px solid ${colors.grey};
+  width: 100%;
+  box-sizing: border-box;
 
-    &:focus{
-        outline:none;
-        border-color:${colors.blue};
-    }
+  &:focus {
+    outline: none;
+    border-color: ${colors.blue};
+  }
 
-    &[aria-invalid='true']{
-        border-color:${colors.red};
-    }
-`
+  &[aria-invalid='true'] {
+    border-color: ${colors.red};
+  }
+`;
+
 export default Input;

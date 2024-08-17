@@ -24,8 +24,8 @@ function App() {
       <Button full={true} disabled={true}> 클릭해주세요</Button>
 
       <div style={{ height: 10, width: '100%', background: '#efefef' }}/>
-      <Input placeholder='로그인'/>
-      <Input/>
+      <Input placeholder='로그인' aria-invalid={false}/>
+      <Input aria-invalid={true}/>
 
 
 

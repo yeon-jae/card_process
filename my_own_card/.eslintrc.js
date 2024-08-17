@@ -4,11 +4,10 @@ module.exports = {
     'react-app',
     'react-app/jest',
     'plugin:prettier/recommended',
-    'plugin:@typescript-eslint/recommended',
     'plugin:import/errors',
     'plugin:import/warnings',
   ],
-  plugins: ['prettier', 'react', '@typescript-eslint', 'import'],
+  plugins: ['prettier', 'react',  'import'],
   rules: {
     'prettier/prettier': 'error',
     'react/react-in-jsx-scope': 'off',
