@@ -1,8 +1,9 @@
 import './App.css'
 // import Text from './components/shared/Text'
 import Text from "@shared/Text"
-import Button from './components/shared/Button'
-import Input from './components/shared/Input'
+import Button from '@shared/Button'
+import Input from '@shared/Input'
+import TextField from '@shared/TextField'
 
 function App() {
   return (
@@ -23,10 +24,12 @@ function App() {
       <Button full={true}>클릭해주세요</Button>
       <Button full={true} disabled={true}> 클릭해주세요</Button>
 
-      <div style={{ height: 10, width: '100%', background: '#efefef' }}/>
-      <Input placeholder='로그인' aria-invalid={false}/>
-      <Input aria-invalid={true}/>
+      <div style={{ height: 10, width: '100%', background: '#efefef' }} />
+      <Input placeholder='로그인' aria-invalid={false} />
+      <Input aria-invalid={true} />
 
+      <TextField label="아이디" />
+      <TextField label="패스워드" />
 
 
 
