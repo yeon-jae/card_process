@@ -1,6 +1,6 @@
 import styled from "@emotion/styled";
 
-function Dimmend({ children }: { children: React.ReactNode }) {
+function Dimmed({ children }: { children: React.ReactNode }) {
   return
 }
 
@@ -15,4 +15,4 @@ const container = styled.div`
 
 `
 
-export default Dimmend
+export default Dimmed

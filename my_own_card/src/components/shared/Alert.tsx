@@ -1,6 +1,6 @@
 import { colors } from "@/styles/colorPalette";
 import styled from "@emotion/styled";
-import Dimmend from "./Dimmend";
+import Dimmed from "./Dimmed";
 import Text from "./Text";
 import Flex from "./Flex";
 import Button from "./Button";
@@ -23,7 +23,7 @@ function Alert({
     return null
   }
   return (
-    <Dimmend>
+    <Dimmed>
       <AlertContainer>
         <Text typography="t4"
           bold={true}
@@ -43,7 +43,7 @@ function Alert({
         </Flex>
 
       </AlertContainer>
-    </Dimmend>
+    </Dimmed>
   )
 }
 const AlertContainer = styled.div`
