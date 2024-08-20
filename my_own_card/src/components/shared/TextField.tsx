@@ -27,7 +27,12 @@ const TextField = forwardRef<HTMLInputElement, TextFieldProps>(
                 {label ? <Text typography="t7" color={labelColor} display="inline-block"
                     style={{ marginBottom: 6 }}>{label}</Text> : null}
 
-                <Input ref={ref} aria-invalid={hasError} onFocus={handleFocus} onBlur={handleBlur}{...props} />
+                <Input
+                    ref={ref}
+                    aria-invalid={hasError}
+                    onFocus={handleFocus}
+                    onBlur={handleBlur}{...props}
+                />
                 {helpMessage ? (
                     <Text
                         typography="t7"
