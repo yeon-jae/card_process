@@ -60,3 +60,5 @@ const AlertContainer = styled.div`
   box-sizing:border-box;
 
 `
+
+export default Alert
