@@ -1,4 +1,10 @@
+import CardListAddButton from "@/components/test/CardListAddButton";
+
 function TestPage(){
-    return<div>test페이지 </div>
+    return (
+        <div>
+            <CardListAddButton/>
+        </div>
+    )
 }
 export default TestPage;
