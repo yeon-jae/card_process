@@ -1,4 +1,4 @@
-import { ComponentProps, createContext, useContext } from "react";
+import { ComponentProps, createContext, useCallback, useContext, useMemo, useState } from "react";
 import { createPortal } from "react-dom";
 import Alert from "@shared/Alert";
 
@@ -15,12 +15,40 @@ const defaultValues: AlertProps = {
     description: null,
     onButtonClick: () => { },
 }
-function AlertContextProvider({ children }: { children: React.ReactNode }) {
-    const useState = [];
+export function AlertContextProvider({ children }: { children: React.ReactNode }) {
+    const [alertState, setAlertState]=useState(defaultValues);
+    const $portal_root=document.getElementById('root-portal')
+    const close=useCallback(()=>{
+        setAlertState(defaultValues)
+    },[])
+    const open=useCallback(({onButtonClick,...options}:AlertOptions)=>{
+        setAlertState({
+            ...options,
+            onButtonClick:()=>{
+                close(),
+                onButtonClick()
+            },
+            open:true,
+
+        })
+    },[close])
+    const values=useMemo(()=>({open}),[open])
+
+
     return (
-        <Context.Provider>
+        <Context.Provider value={values}>
             {children}
-            <Alert />
+            {$portal_root!=null?createPortal(<Alert{...alertState}/>,$portal_root):null}
+            <Alert {...alertState}/>
         </Context.Provider>
     )
+}
+
+
+export function useAlertContext(){
+    const values=useContext(Context)
+    if (values==null){
+        throw new Error('Alert context 내부에서 사용해주세요')
+    }
+    return values
 }

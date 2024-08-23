@@ -5,8 +5,11 @@ import Button from '@shared/Button'
 import Input from '@shared/Input'
 import TextField from '@shared/TextField'
 import Alert from './components/shared/Alert'
+import { useAlertContext } from '@contexts/AlertContext'
 
 function App() {
+  const {open}=useAlertContext()
+
   return (
     <div>
       <Text typography="t1" display="black" color="red">
@@ -34,15 +37,27 @@ function App() {
 
       <div style={{ height: 10, width: '100%', background: '#efefef' }} />
 
-      <Alert
+      {/* <Alert
         open={true}
         description="안녕하세요"
         title="알람이 떴습니다."
         onButtonClick={()=>{}}
-      />
+      /> */}
 
+        <Button
+                  onClick={()=>{
+                    open({
+                      title:'카드신청완료',
+                      description:'내역페이지에서 확인해주세요',
+                      onButtonClick:()=>{
+        
+                      }
+                    })
+                  }}>
+                    경고창 클릭
+        </Button>
 
-
+ 
     </div>
   )
 }

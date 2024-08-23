@@ -6,6 +6,8 @@ import reportWebVitals from './reportWebVitals';
 import { Global } from '@emotion/react';
 import globalStyles from './styles/globalStyles';
 import Text from './components/shared/Text';
+import {AlertContextProvider} from '@contexts/AlertContext'
+
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -13,7 +15,9 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <Global styles={globalStyles} />
+    <AlertContextProvider>
     <App />
+    </AlertContextProvider>
   </React.StrictMode>
 );
 
