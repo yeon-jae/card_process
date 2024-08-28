@@ -9,3 +9,8 @@ export interface Card{
     }
     payback?:string
 }
+export interface AdBanner{
+    title:string,
+    description:string,
+    link:string
+}
