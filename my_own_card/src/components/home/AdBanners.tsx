@@ -12,7 +12,7 @@ function AdBanners() {
       <Link to="/">
         <Flex direction="column" css={bannerContainerStyles}>
           <Text bold={true}>배너 타이틀</Text>
-          <Text typography="t7">배너 내용</Text>
+          <Text typography="t6">배너 내용</Text>
         </Flex>
       </Link>
     </Container>
