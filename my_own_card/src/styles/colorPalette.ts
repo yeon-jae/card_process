@@ -7,7 +7,7 @@ export const colorPalette=css`
     --green:#61D09E;
     --white:#F1FCFF;
     --black:#000000;
-    --grey:#D9D9D9;
+    --grey:#F5F5F5;
   }
 `
 export const colors={

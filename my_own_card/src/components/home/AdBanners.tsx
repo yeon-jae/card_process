@@ -4,9 +4,8 @@ import { getAdBanners } from "@remote/adBanner";
 import Flex from "@shared/Flex";
 import Text from "@shared/Text";
 import { colors } from "@styles/colorPalette";
-import styled from "@emotion/styled";
 import { Link } from "react-router-dom";
-
+import styled from "styled-components";
 function AdBanners() {
   return (
     <Container>
@@ -22,12 +21,13 @@ function AdBanners() {
 
 
 const Container = styled.div`
-  papdding:24px;
+  padding:24px;
+  background-color:${colors.grey};
+  
   `
 
 const bannerContainerStyles = css`
   padding:16px;
-  background-color:${colors.grey};
   border-radius:4px;
 `
 
