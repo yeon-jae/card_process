@@ -3,7 +3,9 @@ import { useEffect } from "react";
 import { getCards } from "@remote/card";
 function HomePage() {
     useEffect(() => {
-        getCards()
+        getCards().then((response) => {
+            console.log('response', response)
+        })
     }, [])
     return (
         <div>
