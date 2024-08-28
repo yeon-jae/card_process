@@ -5,15 +5,17 @@ import Flex from "@shared/Flex";
 import Text from "@shared/Text";
 import { colors } from "@styles/colorPalette";
 import styled from "@emotion/styled";
-
+import { Link } from "react-router-dom";
 
 function AdBanners() {
   return (
     <Container>
-      <Flex direction="column" css={bannerContainerStyles}>
-        <Text bold={true}>배너 타이틀</Text>
-        <Text typography="t7">배너 내용</Text>
-      </Flex>
+      <Link to="/">
+        <Flex direction="column" css={bannerContainerStyles}>
+          <Text bold={true}>배너 타이틀</Text>
+          <Text typography="t7">배너 내용</Text>
+        </Flex>
+      </Link>
     </Container>
   )
 }
