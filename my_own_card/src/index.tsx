@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { QueryClient, QueryClientProvider } from 'react-query';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -8,6 +7,7 @@ import { Global } from '@emotion/react';
 import globalStyles from './styles/globalStyles';
 import Text from './components/shared/Text';
 import { AlertContextProvider } from '@contexts/AlertContext'
+import { QueryClient, QueryClientProvider } from 'react-query';
 
 const client = new QueryClient({
   defaultOptions: {},
