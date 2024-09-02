@@ -7,14 +7,18 @@ import { colors } from "@styles/colorPalette";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 function AdBanners() {
+  const { data } = useQuery(['adBanners'], () => getAdBanners())
   return (
     <Container>
-      <Link to="/">
-        <Flex direction="column" css={bannerContainerStyles}>
-          <Text bold={true}>배너 타이틀</Text>
-          <Text typography="t6">배너 내용</Text>
-        </Flex>
-      </Link>
+      {data?.map((banner) =>
+      (
+        <Link to={banner.link}>
+          <Flex direction="column" css={bannerContainerStyles}>
+            <Text bold={true}>{banner.title}</Text>
+            <Text typography="t7">{banner.description}</Text>
+          </Flex>
+        </Link>
+      ))}
     </Container>
   )
 }
