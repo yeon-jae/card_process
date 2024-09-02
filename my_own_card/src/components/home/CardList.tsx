@@ -8,12 +8,11 @@ function CardList() {
   return (
     <div>
       <ul>
-        {data.map(() => {
+        {data.map((card, index) => {
           return (
             <ListRow
-              left={<div>left</div>}
-              contents={<ListRow.Texts title="타이틀" subTitle="서브타이틀" />}
-              right={<div>right</div>}
+              contents={<ListRow.Texts title={`${index + 1}위`} subTitle={card.name} />}
+              right={card.payback != null ? <div>{card.payback}</div> : null}
               withArrow={true}
             />
           )
