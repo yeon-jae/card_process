@@ -1,5 +1,7 @@
 import { css } from "@emotion/react"
 import Flex from "./Flex"
+import Text from "./Text"
+
 interface ListRowProps {
   left?: React.ReactNode
   contents: React.ReactNode
@@ -26,8 +28,21 @@ const listRowLeftStyles = css`
   margin-right:14px;  
 `
 const listRowContentStyles = css`
-  flex:1
+  flex:1;
 `
+function ListRowTexts({
+  title, subTitle
+}: {
+  title: string
+  subTitle: string
+}) {
+  return (
+    <Flex direction="column">
+      <Text bold={true}>{title}</Text>
+      <Text typography="t7">{subTitle}</Text>
+    </Flex>
+  )
+}
 
 function IconArrowRight() {
   return (
@@ -37,3 +52,6 @@ function IconArrowRight() {
     </svg>
   )
 }
+
+ListRow.Texts = ListRowTexts
+export default ListRow
