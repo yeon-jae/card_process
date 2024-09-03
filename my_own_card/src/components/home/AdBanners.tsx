@@ -1,20 +1,33 @@
 import { css } from "@emotion/react";
-import { useQuery } from "react-query";
 import { getAdBanners } from "@remote/adBanner";
 import Flex from "@shared/Flex";
 import Text from "@shared/Text";
 import { colors } from "@styles/colorPalette";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { useQuery } from "react-query";
+
 function AdBanners() {
+  const { data } = useQuery(['adBanners'], () => getAdBanners())
   return (
     <Container>
-      <Link to="/">
-        <Flex direction="column" css={bannerContainerStyles}>
-          <Text bold={true}>배너 타이틀</Text>
-          <Text typography="t7">배너 내용</Text>
-        </Flex>
-      </Link>
+      <Swiper spaceBetween={8}>
+        {data?.map((banner) => {
+          return (
+            <SwiperSlide key={banner.id}>
+              <Link to={banner.link}>
+                <Flex direction="column" css={bannerContainerStyles}>
+                  <Text bold={true}>{banner.title}</Text>
+                  <Text typography="t7">{banner.description}</Text>
+                </Flex>
+              </Link>
+            </SwiperSlide>
+
+
+          )
+        })}
+      </Swiper>
     </Container>
   )
 }

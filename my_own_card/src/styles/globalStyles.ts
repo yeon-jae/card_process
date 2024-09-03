@@ -30,7 +30,6 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
   }
-  /* HTML5 display-role reset for older browsers */
   article,
   aside,
   details,
@@ -78,4 +77,11 @@ time, mark, audio, video {
     font: inherit;
     line-height: normal;
   }
-`;
+  
+  a{
+    text-decoration:inherit;
+  }
+`
+
+
+;
