@@ -1,5 +1,5 @@
 import ListRow from "@shared/ListRow"
-import { useQuery } from "react-query"
+import { useQuery, useInfiniteQuery } from "react-query"
 import { getCards } from "@/remote/card"
 
 function CardList() {
@@ -11,7 +11,10 @@ function CardList() {
         {data.map((card, index) => {
           return (
             <ListRow
-              contents={<ListRow.Texts title={`${index + 1}위`} subTitle={card.name} />}
+              key={card.id}
+              contents={
+                <ListRow.Texts title={`${index + 1}위`} subTitle={card.name}
+                />}
               right={card.payback != null ? <div>{card.payback}</div> : null}
               withArrow={true}
             />
