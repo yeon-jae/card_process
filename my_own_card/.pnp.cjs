@@ -38,6 +38,7 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/user-event", "virtual:ee121b93a69f535d63cfdcae2abf156c1692cff29ebdaabd7d77fd9c6775c2b24cc001de15b98004e1c43d2f73bb68b005515257c589c8cc36c62eb44528bacd#npm:13.5.0"],\
           ["@types/eslint", "npm:8.56.11"],\
           ["@types/jest", "npm:27.5.2"],\
+          ["@types/lodash", "npm:4.17.7"],\
           ["@types/node", "npm:16.18.105"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\
@@ -6373,6 +6374,15 @@ const RAW_RUNTIME_STATE =
         "packageLocation": "./.yarn/cache/@types-json5-npm-0.0.29-f63a7916bd-6bf5337bc4.zip/node_modules/@types/json5/",\
         "packageDependencies": [\
           ["@types/json5", "npm:0.0.29"]\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["@types/lodash", [\
+      ["npm:4.17.7", {\
+        "packageLocation": "./.yarn/cache/@types-lodash-npm-4.17.7-2077805efb-40c965b5ff.zip/node_modules/@types/lodash/",\
+        "packageDependencies": [\
+          ["@types/lodash", "npm:4.17.7"]\
         ],\
         "linkType": "HARD"\
       }]\
@@ -14703,6 +14713,7 @@ const RAW_RUNTIME_STATE =
           ["@testing-library/user-event", "virtual:ee121b93a69f535d63cfdcae2abf156c1692cff29ebdaabd7d77fd9c6775c2b24cc001de15b98004e1c43d2f73bb68b005515257c589c8cc36c62eb44528bacd#npm:13.5.0"],\
           ["@types/eslint", "npm:8.56.11"],\
           ["@types/jest", "npm:27.5.2"],\
+          ["@types/lodash", "npm:4.17.7"],\
           ["@types/node", "npm:16.18.105"],\
           ["@types/react", "npm:18.3.3"],\
           ["@types/react-dom", "npm:18.3.0"],\

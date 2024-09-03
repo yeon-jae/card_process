@@ -1,14 +1,29 @@
 import ListRow from "@shared/ListRow"
-import { useQuery, useInfiniteQuery } from "react-query"
+import { useInfiniteQuery } from "react-query"
 import { getCards } from "@/remote/card"
+import { flatten } from "lodash"
+
 
 function CardList() {
-  const { data } = useQuery(['cards'], () => getCards())
+  const { data } = useInfiniteQuery(
+    ['cards'],
+    ({ pageParam }) => {
+      console.log("pageParam", pageParam)
+      return getCards()
+    },
+    {
+      getNextPageParam: (snapshot) => {
+        console.log("snapshot", snapshot)
+      },
+    },
+  )
+  console.log("data", data)
+  console.log(flatten(data?.pages.map(({ items }) => items)))
   if (data == null) { return null }
   return (
     <div>
       <ul>
-        {data.map((card, index) => {
+        {/* {data.map((card, index) => {
           return (
             <ListRow
               key={card.id}
@@ -19,7 +34,7 @@ function CardList() {
               withArrow={true}
             />
           )
-        })}
+        })} */}
 
       </ul>
     </div>
